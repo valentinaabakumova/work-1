@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
 const Actions = ({ id = 'не известно', role, action }) => {
+  console.log(action[0]);
+
   return (
     <div>
       {/* <h2>{id}</h2> */}

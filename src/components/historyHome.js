@@ -1,16 +1,26 @@
-/* historyHome.tsx */
+import Component from './Component';
+import PropTypes from 'prop-types';
 
-function currentUser() {
-  const ROLE = 'admin';
-
-  return ROLE;
+function ComponentList({ items }) {
+  return (
+    <div className="wrap">
+      {
+        <Component
+          title={items.title}
+          description={items.description}
+          // roleo={roleo[0]}
+        />
+      }
+    </div>
+  );
 }
 
-const user = currentUser(); //role
+// ComponentList.propTypes = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//     })
+//   ),
+// };
 
-// const myItems = [
-//   {title: "import", description: "desctiption text", role: ["admin"]},
-//   {title: "delete", description: "desctiption text", role: ["admin"]},
-//     {title: "save", description: "desctiption text", role: ["role1"]}
-// ]
-// <Component myItems = { myItems.filter((item) => item.role.includes(user.role))}
+export default ComponentList;

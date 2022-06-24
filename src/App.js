@@ -1,27 +1,41 @@
-// import PaintingList from './components/PaintingList';
 import { FaCannabis } from 'react-icons/fa';
 import { FaOctopusDeploy } from 'react-icons/fa';
 import { GiDinosaurRex } from 'react-icons/gi';
 
-import ActionList from './components/ActionList';
-import Description from './components/Description';
+import ComponentList from './components/historyHome';
 import Section from './components/Section';
-// import paintings from './paintings.json';
-import roles from './roles.json';
 
-const ROLE = 'super-admin';
+import actions from './actions.json';
+
+function getUser() {
+  const r = 1;
+  let ROLE;
+
+  switch (r) {
+    case 1:
+      return (ROLE = 'super-admin');
+    case 2:
+      return (ROLE = 'admin');
+    case 3:
+      return (ROLE = 'user');
+    default:
+      return (ROLE = 'super-admin');
+  }
+}
 
 export default function App() {
-  switch (ROLE) {
+  switch (getUser()) {
     case 'super-admin':
       return (
-        <div>
-          <Description />
-          {/* not important */}
-          <Section title="Role: super-admin">
-            <GiDinosaurRex />
-            <ActionList items={roles[0]} />
-          </Section>
+        <div className="role-action">
+          {/* <Section title="Role: super-admin">
+            <GiDinosaurRex /> */}
+          <div className="flex-wrap">
+            <ComponentList items={actions[0]} />
+            <ComponentList items={actions[1]} />
+            <ComponentList items={actions[2]} />
+          </div>
+          {/* </Section> */}
         </div>
       );
 
@@ -30,29 +44,9 @@ export default function App() {
         <div>
           <Section title="Role: admin">
             <FaOctopusDeploy />
-            <ActionList items={roles[1]} />
-            <div className="wrap">
-              <div className="wrap-action">
-                <div className="text">
-                  <div className="text-number">1</div>
-                  <h3 className="text-name">Import</h3>
-                </div>
-                <p className="description">
-                  Add products to the library using the Import CSV function in
-                  the top right corner.
-                </p>
-              </div>
-
-              <div className="wrap-action">
-                <div className="text">
-                  <div className="text-number">2</div>
-                  <h3 className="text-name">Search</h3>
-                </div>
-                <p className="description">
-                  Each product variant is identified by four attributes you can
-                  use to filter the variant list in the left sidebar.
-                </p>
-              </div>
+            <div className="flex-wrap">
+              <ComponentList items={actions[1]} />
+              <ComponentList items={actions[2]} />
             </div>
           </Section>
         </div>
@@ -63,19 +57,7 @@ export default function App() {
         <div>
           <Section title="Role: user">
             <FaCannabis />
-            <ActionList items={roles[2]} />
-            <div className="wrap">
-              <div className="wrap-action">
-                <div className="text">
-                  <div className="text-number">1</div>
-                  <h3 className="text-name">Search</h3>
-                </div>
-                <p className="description">
-                  Each product variant is identified by four attributes you can
-                  use to filter the variant list in the left sidebar.
-                </p>
-              </div>
-            </div>
+            <ComponentList items={actions[1]} />
           </Section>
         </div>
       );

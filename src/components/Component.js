@@ -1,40 +1,25 @@
-const Component = ({ id = 'не известно', role, action }) => {
+import React from 'react';
+
+const Component = ({ title, description, roleo }) => {
+  // console.log(role[0]);
+  let number = 1;
   return (
-    <div>
-      {/* <h2>{id}</h2> */}
-      <p>Role: {role}</p>
-      <p>Action: {action.map(item => '--' + item)}</p>
-      {/* <button type="button">Добавить</button> */}
+    <div className="wrap">
+      <div className="wrap-action">
+        <div className="text">
+          <div className="text-number">{number}</div>
+          <h3 className="text-name">{title}</h3>
+        </div>
+        <p className="description">{description}</p>
+      </div>
     </div>
   );
 };
 
 // Component.propTypes = {
-//   id: PropTypes.string.isRequired,
-//   role: PropTypes.string.isRequired,
-//   action: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   // roleo: PropTypes.string.isRequired,
 // };
 
 export default Component;
-
-// Component.tsx
-
-// props: {
-//   items: [
-//     { title: 'import', description: 'desctiption text', role: ['admin'] },
-//     { title: 'delete', description: 'desctiption text', role: ['admin'] },
-//     { title: 'save', description: 'desctiption text', role: ['role1'] },
-//   ];
-// }
-
-// {items.map((item, i) => (<div  key={i}>
-//   <div>
-//       <div>{i+1}</div>
-//   <div>
-//     <div>
-//       <div>{item.title}</div>
-//       <div>{item.desctiption}</div>
-//     </div>
-//   <div>
-// </div>
-// ))}

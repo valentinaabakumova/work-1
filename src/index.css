@@ -71,3 +71,8 @@ svg {
   margin-left: 50px;
   margin-top: 0px;
 }
+
+.flex-wrap {
+  display: flex;
+  justify-content: center;
+}
