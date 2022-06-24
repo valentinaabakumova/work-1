@@ -1,7 +1,7 @@
 // import PaintingList from './components/PaintingList';
-// import { FaCannabis } from 'react-icons/fa';
-// import { FaOctopusDeploy } from 'react-icons/fa';
-// import { GiDinosaurRex } from 'react-icons/gi';
+import { FaCannabis } from 'react-icons/fa';
+import { FaOctopusDeploy } from 'react-icons/fa';
+import { GiDinosaurRex } from 'react-icons/gi';
 
 import ActionList from './components/ActionList';
 import Description from './components/Description';
@@ -9,7 +9,7 @@ import Section from './components/Section';
 // import paintings from './paintings.json';
 import roles from './roles.json';
 
-const ROLE = 'admin';
+const ROLE = 'super-admin';
 
 export default function App() {
   switch (ROLE) {
@@ -19,7 +19,7 @@ export default function App() {
           <Description />
           {/* not important */}
           <Section title="Role: super-admin">
-            {/* <GiDinosaurRex /> */}
+            <GiDinosaurRex />
             <ActionList items={roles[0]} />
           </Section>
         </div>
@@ -29,7 +29,7 @@ export default function App() {
       return (
         <div>
           <Section title="Role: admin">
-            {/* <FaOctopusDeploy /> */}
+            <FaOctopusDeploy />
             <ActionList items={roles[1]} />
             <div className="wrap">
               <div className="wrap-action">
@@ -62,7 +62,7 @@ export default function App() {
       return (
         <div>
           <Section title="Role: user">
-            {/* <FaCannabis /> */}
+            <FaCannabis />
             <ActionList items={roles[2]} />
             <div className="wrap">
               <div className="wrap-action">
