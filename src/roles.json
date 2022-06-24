@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "role": "super-admin",
+    "action": ["import", "search", "manage"]
+  },
+  {
+    "id": "2",
+    "role": "admin",
+    "action": ["import", "search"]
+  },
+  {
+    "id": "3",
+    "role": "user",
+    "action": ["search"]
+  }
+]
