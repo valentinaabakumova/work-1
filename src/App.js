@@ -4,14 +4,15 @@ import { GiDinosaurRex } from 'react-icons/gi';
 
 import ComponentList from './components/historyHome';
 import Section from './components/Section';
+import UserIndex from './User';
 
 import actions from './actions.json';
 
 function getUser() {
-  const r = 1;
+  const ui = 1;
   let ROLE;
 
-  switch (r) {
+  switch (ui) {
     case 1:
       return (ROLE = 'super-admin');
     case 2:
@@ -24,18 +25,34 @@ function getUser() {
 }
 
 export default function App() {
+  //
+  // actions.map((item, i) => (
+  //     return (
+
+  //   <div key={i}>
+  //     <div>
+  //       <div>{i + 1}</div>
+  //     </div>
+  //     <div>
+  //       <div>{item.title}</div>
+  //       <div>{item.desctiption}</div>
+  //     </div>
+  //   </div>
+  // ); ));
+
+  //
   switch (getUser()) {
     case 'super-admin':
       return (
         <div className="role-action">
-          {/* <Section title="Role: super-admin">
-            <GiDinosaurRex /> */}
-          <div className="flex-wrap">
-            <ComponentList items={actions[0]} />
-            <ComponentList items={actions[1]} />
-            <ComponentList items={actions[2]} />
-          </div>
-          {/* </Section> */}
+          <Section title="Role: super-admin">
+            <GiDinosaurRex />
+            <div className="flex-wrap">
+              <ComponentList items={actions[0]} />
+              <ComponentList items={actions[1]} />
+              <ComponentList items={actions[2]} />
+            </div>
+          </Section>
         </div>
       );
 
