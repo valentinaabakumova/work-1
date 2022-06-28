@@ -1,15 +1,18 @@
  [ 
     {
+        "id": "1",
         "title": "Import", 
         "description": "Add products to the library using the Import CSV function in the top right corner.", 
         "role": ["admin"]
     },
     {
+        "id": "2",
         "title": "Search", 
         "description": "Each product variant is identified by four attributes you can use to filter the variant list in the left sidebar.", 
         "role": ["admin", "role1"]
     },
     {
+        "id": "3",
         "title": "Manage", 
         "description": "Selecting a product variant in the sidebar shows managment options for the variant.", 
         "role": ["admin", "role1"]

@@ -4,12 +4,13 @@ import { GiDinosaurRex } from 'react-icons/gi';
 
 import ComponentList from './components/historyHome';
 import Section from './components/Section';
+import Component from './components/Component';
 import UserIndex from './User';
 
 import actions from './actions.json';
 
 function getUser() {
-  const ui = 1;
+  const ui = 2;
   let ROLE;
 
   switch (ui) {
@@ -25,24 +26,11 @@ function getUser() {
 }
 
 export default function App() {
-  //
-  // actions.map((item, i) => (
-  //     return (
-
-  //   <div key={i}>
-  //     <div>
-  //       <div>{i + 1}</div>
-  //     </div>
-  //     <div>
-  //       <div>{item.title}</div>
-  //       <div>{item.desctiption}</div>
-  //     </div>
-  //   </div>
-  // ); ));
-
-  //
   switch (getUser()) {
     case 'super-admin':
+      actions[0].id = '1';
+      actions[1].id = '2';
+      actions[2].id = '3';
       return (
         <div className="role-action">
           <Section title="Role: super-admin">
@@ -57,6 +45,8 @@ export default function App() {
       );
 
     case 'admin':
+      actions[1].id = '1';
+      actions[2].id = '2';
       return (
         <div>
           <Section title="Role: admin">
@@ -70,6 +60,7 @@ export default function App() {
       );
 
     case 'user':
+      actions[1].id = 1;
       return (
         <div>
           <Section title="Role: user">

@@ -6,6 +6,7 @@ function ComponentList({ items }) {
     <div className="wrap">
       {
         <Component
+          id={items.id}
           title={items.title}
           description={items.description}
           // roleo={roleo[0]}

@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Component = ({ title, description, roleo }) => {
-  // console.log(role[0]);
-  let number = 1;
+const Component = ({ id, title, description, role }) => {
   return (
     <div className="wrap">
       <div className="wrap-action">
         <div className="text">
-          <div className="text-number">{number}</div>
+          <div className="text-number">{id}</div>
           <h3 className="text-name">{title}</h3>
         </div>
         <p className="description">{description}</p>
