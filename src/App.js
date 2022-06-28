@@ -1,6 +1,6 @@
 import { FaCannabis } from 'react-icons/fa';
 import { FaOctopusDeploy } from 'react-icons/fa';
-import { GiDinosaurRex } from 'react-icons/gi';
+// import { GiDinosaurRex } from 'react-icons/gi';
 
 import ComponentList from './components/historyHome';
 import Section from './components/Section';
@@ -30,14 +30,14 @@ export default function App() {
       actions[2].id = '3';
       return (
         <div className="role-action">
-          <Section title="Role: super-admin">
-            <GiDinosaurRex />
-            <div className="flex-wrap">
-              <ComponentList items={actions[0]} />
-              <ComponentList items={actions[1]} />
-              <ComponentList items={actions[2]} />
-            </div>
-          </Section>
+          {/* <Section title="Role: super-admin">
+            <GiDinosaurRex /> */}
+          <div className="flex-wrap">
+            <ComponentList items={actions[0]} />
+            <ComponentList items={actions[1]} />
+            <ComponentList items={actions[2]} />
+          </div>
+          {/* </Section> */}
         </div>
       );
 
