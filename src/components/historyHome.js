@@ -1,5 +1,5 @@
 import Component from './Component';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 function ComponentList({ items }) {
   return (

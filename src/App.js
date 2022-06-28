@@ -4,24 +4,21 @@ import { GiDinosaurRex } from 'react-icons/gi';
 
 import ComponentList from './components/historyHome';
 import Section from './components/Section';
-import Component from './components/Component';
-import UserIndex from './User';
 
 import actions from './actions.json';
 
 function getUser() {
-  const ui = 2;
-  let ROLE;
+  const ui = 1;
 
   switch (ui) {
     case 1:
-      return (ROLE = 'super-admin');
+      return 'super-admin';
     case 2:
-      return (ROLE = 'admin');
+      return 'admin';
     case 3:
-      return (ROLE = 'user');
+      return 'user';
     default:
-      return (ROLE = 'super-admin');
+      return 'super-admin';
   }
 }
 
